@@ -91,6 +91,48 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #11999e8d; 
       }
+     *{
+        cursor: default;
+      }
+      ::selection
+        {
+        background-color: #11999E;
+        color: rgb(0, 0, 0);
+        font-family: poppins;
+        cursor: pointer ;
+        }
       </style>
+      <script>
+        // Disable right-click context menu
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+// Disable F12 key (developer tools)
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'F12' || e.keyCode === 123) {
+    e.preventDefault();
+  }
+});
+
+// Disable Ctrl+Shift+I (developer tools)
+document.addEventListener('keydown', function (e) {
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.keyCode === 73)) {
+    e.preventDefault();
+  }
+});
+
+// Disable copying and pasting
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('paste', function (e) {
+  e.preventDefault();
+});
+document.addEventListener('dragstart', function (e) {
+  e.preventDefault();
+});
+    </script>
+          
 </body>
 </html>
